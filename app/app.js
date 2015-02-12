@@ -85,8 +85,8 @@ zlcApp.config(['$routeProvider', '$mdThemingProvider',
 
   //FAVORITES
   var favoritePaletteMap = $mdThemingProvider.extendPalette('indigo', 
-    // { '500': '#4c4c61',
-    { '500': '#26225d',
+    { '500': '#4c4c61',
+    // { '500': '#26225d',
       '600': '#3d3d4d',
       'contrastDefaultColor': 'light'});
   $mdThemingProvider.definePalette('favoritePalette', favoritePaletteMap);     

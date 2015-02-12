@@ -1,83 +1,11 @@
 /* app css stylesheet */
 
-/* Material Design tweeks */
-a.md-button [class^="zli-"] {
-  vertical-align: sub;
-  vertical-align: -webkit-baseline-middle;
-}
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
-
-
-
-/*********** Angular ng-view containter ***********/
-/* variables: header & footer height at each responsive width */
-html, body {
-  min-height: 100%
-}
-body {
-  overflow-x:hidden;
-  font-family:'Open Sans';
-}
-.page-wrap {
-  min-height:100%;
-  margin-bottom: -64px;  /*this must be equal to footer height at all media queries */
-} 
-
-a {
-  color:hsl(117, 21%, 50%);
-}
-.gap {
-  height: 30px;
-}
-
-/**** General use color and gradients in *****/
-.home-bkgrnd {
-  background-color:hsl(49, 93%, 83%);
-}
-.home-color {
-  color:hsl(49, 93%, 83%);;
-}
-.receipt-bkgrnd {
-  background-color:hsl(196, 47%, 44%);
-}
-.receipt-color {
-  color:hsl(196, 47%, 44%);;
-}
-.reward-bkgrnd {
-  background-color:hsl(117, 22%, 58%);
-}
-.reward-color {
-  color:hsl(117, 22%, 58%);
-}
-.trend-bkgrnd {
-  background-color:hsl(26, 70%, 54%);
-}
-.trend-color {
-  color:hsl(26, 70%, 54%);
-}
-.favorite-bkgrnd {
-  background-color:hsl(240, 12%, 34%);
-}
-.favorite-color {
-  color:hsl(240, 12%, 34%);
-}
-.logo-green-bkgrnd {
- background-color:hsla(106, 43%, 47%, 1);
-}
-.logo-green-color {
-  color:hsla(106, 43%, 47%, 1);
-}
-.logo-dkblue-bkgrnd {
-  background-color:hsl(244, 46%, 25%);
-}
-.logo-dkblue-color {
-  color:hsl(244, 46%, 25%);
-}
 
 /*********** Toolbars ***********/
 md-toolbar{
   padding: 0 10px;
+  font-family:'Open Sans';
 }
 md-toolbar.md-favoriteTheme-theme,
 md-toolbar.md-favoriteTheme-theme .md-button {

@@ -11,9 +11,9 @@
           <div class="md-tile-content">
             <md-grid-list md-cols="4" md-row-height="45px" md-row-height="fit" md-gutter="15px" class="receipt-value-list">
               <md-grid-tile ng-repeat="totals in item.totals">
-                  <div class="value-box">
+                  <md-button ng-href="#/receipt" class="value-box">
                         ${{totals}}
-                  </div>
+                  </md-button>
               </md-grid-tile>
             </md-grid-list>
           </div>

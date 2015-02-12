@@ -18,10 +18,11 @@ zlcApp.service('RouteCSSClasses', ['$location', function($location){
     };
     var routeToolbarMap = {
       // '/home'      : {'theme' :'default',       'title' : 'Ziploop' } ,
-      '/home'      : {'theme' :'favoriteTheme', 'title' : 'Ziploop' } ,
-      '/receipts'  : {'theme' :'receiptTheme',  'title' : 'Receipts'},
-      '/rewards'   : {'theme' :'rewardTheme',   'title' : 'Rewards'},
-      '/trends'    : {'theme' :'trendTheme',    'title' : 'Trends'}
+      '/home'      : {'pageId': 'home', 'theme' :'favoriteTheme', 'title' : 'Ziploop' } ,
+      '/receipts'  : {'pageId': 'receipts', 'theme' :'receiptTheme',  'title' : 'Receipts'},
+      '/rewards'   : {'pageId': 'rewards', 'theme' :'rewardTheme',   'title' : 'Rewards'},
+      '/trends'    : {'pageId': 'trends', 'theme' :'trendTheme',    'title' : 'Trends'},
+      '/receipt'   : {'pageId': 'receipt', 'theme' :'receiptTheme',    'title' : 'Receipt'}
     }
     // console.log('routeClass', routeClass);
     // console.log('routeClassMap[route]', routeClassMap[route]) ;
