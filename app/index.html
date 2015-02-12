@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="zlcApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Ziploop MD!</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700'
+ rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+  <link rel="stylesheet" href="assets/css/zl-iconfont.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+
+  <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body ng-controller="MainCtrl as main" layout="column" layout-fill >
+    <md-toolbar layout="row" md-theme="{{header.toolbar.theme}}" md-theme-watch 
+      ng-controller="HeaderCtrl as header" class='top-toolbar'>
+      <md-button  ng-href="#/home" class='zl-icon-btn' > 
+        <span class='zli-home'> </span>
+      </md-button> 
+      <h1>{{header.toolbar.title}} </h1> 
+      <md-button ng-click="main.toggleSidenav()" class='zl-icon-btn'> 
+        <span class='zli-menu'> </span>
+      </md-button>
+    </md-toolbar>
+
+      <md-sidenav md-component-id="sidenav" class="md-sidenav-right md-whiteframe-z2">
+        <md-content ng-controller="SideMenuCtrl as sidemenu">
+          <md-list>
+            <md-item ng-repeat="item in sidemenu.sideMenuStuff">
+              <md-item-content>
+                <md-button ng-click=sidemenu.close(item.link) ng-class="{'selected' : item === selected }">
+                  <span class="{{item.fontglyph}}"></span>
+                  <span class="menu-text"> {{item.label}} </span>
+                </md-button>
+              </md-item-content>
+            </md-item>
+          </md-list>
+        </md-content>
+      </md-sidenav>
+    <div ng-view class="animation"></div>
+
+    <md-toolbar layout="row" md-theme="{{header.toolbar.theme}}" md-theme-watch 
+      ng-controller="HeaderCtrl as header" class="bottom-toolbar">
+      <div class='tb-item'> <span class='zli-capture'></span></div>
+      <div class='tb-item'> <span class='zli-messages'> </div>
+      <div class='tb-item'> <span class='zli-settings'> </div>
+      <div class='tb-item'> <span class='zli-help'> </div>
+    </md-toolbar>
+
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-material/angular-material.js"></script>
+  <script src="app.js"></script>
+  <script src="components/main/main-services.js"></script>
+  <script src="components/receipt-summary/receiptSummary.js"></script>
+  <script src="components/reward-summary/rewardSummary.js"></script>
+</body>
+</html>

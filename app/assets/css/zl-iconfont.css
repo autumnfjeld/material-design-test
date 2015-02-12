@@ -1,0 +1,139 @@
+@font-face {
+	font-family: 'ziploop-iconfont';
+	src:url('../fonts/ziploop-iconfont.eot?uu25kt');
+	src:url('../fonts/ziploop-iconfont.eot?#iefixuu25kt') format('embedded-opentype'),
+		url('../fonts/ziploop-iconfont.woff?uu25kt') format('woff'),
+		url('../fonts/ziploop-iconfont.ttf?uu25kt') format('truetype'),
+		url('../fonts/ziploop-iconfont.svg?uu25kt#ziploop-iconfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="zli-"], [class*=" zli-"] {
+	font-family: 'ziploop-iconfont';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.zli-terms:before {
+	content: "\e600";
+}
+.zli-stores:before {
+	content: "\e601";
+}
+.zli-sort:before {
+	content: "\e602";
+}
+.zli-settings:before {
+	content: "\e603";
+}
+.zli-select1:before {
+	content: "\e604";
+}
+.zli-select:before {
+	content: "\e605";
+}
+.zli-safe:before {
+	content: "\e606";
+}
+.zli-rewards:before {
+	content: "\e607";
+}
+.zli-return:before {
+	content: "\e608";
+}
+.zli-redeem:before {
+	content: "\e609";
+}
+.zli-receipts:before {
+	content: "\e60a";
+}
+.zli-promotions:before {
+	content: "\e60b";
+}
+.zli-profile:before {
+	content: "\e60c";
+}
+.zli-privacy:before {
+	content: "\e60d";
+}
+.zli-original:before {
+	content: "\e60e";
+}
+.zli-note:before {
+	content: "\e60f";
+}
+.zli-myloop:before {
+	content: "\e610";
+}
+.zli-more:before {
+	content: "\e611";
+}
+.zli-messages:before {
+	content: "\e612";
+}
+.zli-menu:before {
+	content: "\e613";
+}
+.zli-mail:before {
+	content: "\e614";
+}
+.zli-lookup:before {
+	content: "\e615";
+}
+.zli-logout:before {
+	content: "\e616";
+}
+.zli-lock2:before {
+	content: "\e617";
+}
+.zli-lock1:before {
+	content: "\e618";
+}
+.zli-info:before {
+	content: "\e619";
+}
+.zli-home:before {
+	content: "\e61a";
+}
+.zli-hive:before {
+	content: "\e61b";
+}
+.zli-history:before {
+	content: "\e61c";
+}
+.zli-help:before {
+	content: "\e61d";
+}
+.zli-favorites:before {
+	content: "\e61e";
+}
+.zli-export:before {
+	content: "\e61f";
+}
+.zli-delete:before {
+	content: "\e620";
+}
+.zli-closet:before {
+	content: "\e621";
+}
+.zli-categorize:before {
+	content: "\e622";
+}
+.zli-capture:before {
+	content: "\e623";
+}
+.zli-bang:before {
+	content: "\e624";
+}
+.zli-about:before {
+	content: "\e625";
+}

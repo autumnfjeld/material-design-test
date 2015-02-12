@@ -1,0 +1,307 @@
+/* app css stylesheet */
+
+/* Material Design tweeks */
+a.md-button [class^="zli-"] {
+  vertical-align: sub;
+  vertical-align: -webkit-baseline-middle;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+
+
+
+/*********** Angular ng-view containter ***********/
+/* variables: header & footer height at each responsive width */
+html, body {
+  min-height: 100%
+}
+body {
+  overflow-x:hidden;
+  font-family:'Open Sans';
+}
+.page-wrap {
+  min-height:100%;
+  margin-bottom: -64px;  /*this must be equal to footer height at all media queries */
+} 
+
+a {
+  color:hsl(117, 21%, 50%);
+}
+.gap {
+  height: 30px;
+}
+
+/**** General use color and gradients in *****/
+.home-bkgrnd {
+  background-color:hsl(49, 93%, 83%);
+}
+.home-color {
+  color:hsl(49, 93%, 83%);;
+}
+.receipt-bkgrnd {
+  background-color:hsl(196, 47%, 44%);
+}
+.receipt-color {
+  color:hsl(196, 47%, 44%);;
+}
+.reward-bkgrnd {
+  background-color:hsl(117, 22%, 58%);
+}
+.reward-color {
+  color:hsl(117, 22%, 58%);
+}
+.trend-bkgrnd {
+  background-color:hsl(26, 70%, 54%);
+}
+.trend-color {
+  color:hsl(26, 70%, 54%);
+}
+.favorite-bkgrnd {
+  background-color:hsl(240, 12%, 34%);
+}
+.favorite-color {
+  color:hsl(240, 12%, 34%);
+}
+.logo-green-bkgrnd {
+ background-color:hsla(106, 43%, 47%, 1);
+}
+.logo-green-color {
+  color:hsla(106, 43%, 47%, 1);
+}
+.logo-dkblue-bkgrnd {
+  background-color:hsl(244, 46%, 25%);
+}
+.logo-dkblue-color {
+  color:hsl(244, 46%, 25%);
+}
+
+/*********** Toolbars ***********/
+md-toolbar{
+  padding: 0 10px;
+}
+md-toolbar.md-favoriteTheme-theme,
+md-toolbar.md-favoriteTheme-theme .md-button {
+  color:hsla(0, 0%, 100%, .95);
+}
+
+.md-button.menuBtn {
+  border: none;
+  height: 38px;
+  margin: 16px;
+  width: 50px;
+  background: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNiIgaGVpZ2h0PSIzNiIgdmlld0JveD0iMCAwIDM2IDM2Ij4NCiAgICA8cGF0aCBkPSJNMCAwaDM2djM2aC0zNnoiIGZpbGw9Im5vbmUiLz4NCiAgICA8cGF0aCBkPSJNNCAyN2gyOHYtM2gtMjh2M3ptMC04aDI4di0zaC0yOHYzem0wLTExdjNoMjh2LTNoLTI4eiIvPg0KPC9zdmc+) no-repeat  center center;
+}
+
+md-toolbar a {
+  display:block;
+  margin:auto;
+  text-decoration: none;
+}
+
+md-toolbar h1 {
+  margin: auto;
+  font-size:1.5em;
+}
+
+md-toolbar.bottom-toolbar {
+  position: fixed;
+  bottom:0;
+  box-shadow:0px -2px 5px 0 rgba(0, 0, 0, 0.26);
+    -webkit-justify-content: space-around;
+  justify-content: space-around;
+    -webkit-align-items: center;
+  align-items:center;
+  font-size:36px;
+}
+
+md-toolbar.bottom-toolbar .zli-help {
+  font-size:44px;
+}
+
+/*********** Sidenav area ***********/
+md-sidenav.md-sidenav-right {
+  /*top:68px;  */
+  padding-top:20px;
+}
+md-sidenav.md-sidenav-right  .md-button {
+  margin-left:10px;
+  font-size:1.75em;
+  color:hsl(244, 46%, 25%);
+}
+md-sidenav.md-sidenav-right  .md-button .menu-text {
+  margin-left: 10px;
+  font-size:.8em;
+  vertical-align: text-bottom;
+}
+/* Primary content area */
+
+md-content.page-content {
+  overflow: hidden;
+  height:  537px;  /*667px - 2*64px*/
+}
+  .page-content md-content {
+    padding:0;
+  }
+    .page-content .md-button.action {
+      background-color: transparent;
+      border: none;
+      height: 38px;
+      margin: 8px auto 16px 0;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      width: 36px;
+    }
+
+/* Home */
+/* get height for fixed width, set height for desktop */
+md-content#home {
+    display: -webkit-flex;
+  display:flex;
+    -webkit-flex-direction: column;  
+  flex-flow: column;
+      -webkit-justify-content: space-around;
+  justify-content:space-around;
+  text-align: center;
+}
+
+md-content#home .section1,
+md-content#home .section2,
+md-content#home .section3 {
+    -webkit-flex-basis: auto;
+    -webkit-box-flex: 1;
+  /*flex: 1 auto;*/
+}
+md-content#home .section2 {
+    -webkit-flex-basis: auto;
+    -webkit-box-flex: 2;
+  /*flex: 2 auto;*/
+}
+md-content#home .section3 {
+  text-align: center;
+}
+md-content#home .section1 .md-button  {
+  padding-top:50px;
+  font-size:1.5em;
+}
+md-content#home .section3 p {
+  margin:0;
+}
+.home-button-box {
+  margin: 65px auto;
+  width:90%;
+  max-width: 310px;
+  height: 300px;
+    display: -webkit-flex;
+  display:flex;
+    -webkit-flex-direction: column;
+  flex-flow: column;
+    -webkit-justify-content: space-between;
+  justify-content:space-between;
+    /*-webkit-box-align: center*/
+    -webkit-align-items: center;
+  align-items:center;
+}
+.home-button-box .md-button {
+  width:100%;
+  height:70px;
+  line-height: 56px;
+  font-size:24px;
+  /*flex:1 auto;*/
+  text-transform: none;
+}
+
+
+/* Utils */
+.content-wrapper {
+  position: relative;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.zl-icon-btn {
+  font-size:26px;
+}
+
+/* Receipt Summary */
+.store-logo-box {
+  width:120px;
+}
+.store-logo {
+  max-width:110px;
+  max-height:50px;
+  padding:10px;
+  margin
+  /*margin-right:10px;*/
+}
+#receipt-summary md-item-content {
+  
+}
+.receipt-value-list {
+      display: -webkit-flex;
+  display:flex;
+    -webkit-flex-direction: row;
+  flex-flow: row;
+    -webkit-justify-content: space-between;
+  justify-content:space-between;
+/*    -webkit-align-items: center;
+  align-items:center;*/
+  padding-right:5%;
+  padding-left:5%;
+}
+.value-box {
+  display:inline-block;
+  width:50px;
+  padding:4px 8px;
+  border:1px solid hsl(196, 47%, 44%);
+  border-radius:4px;
+  text-align:center;
+}
+
+/* Reward Summary */
+#reward-summary .md-button {
+  font-size:2em;
+}
+
+/*--------*/
+
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+/*@import 'assets/css/avatars.css';*/

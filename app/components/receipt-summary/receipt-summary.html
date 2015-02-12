@@ -1,0 +1,26 @@
+ 
+ <md-content class="page-content" id="receipt-summary" md-theme='receiptTheme'>
+  <md-content>
+    <md-list>
+      <md-item ng-repeat="item in recsum.fakeRecords">
+        <md-item-content>
+          <div class="md-tile-left store-logo-box">
+              <img ng-src="{{item.logo}}" class="store-logo" >
+          </div>
+
+          <div class="md-tile-content">
+            <md-grid-list md-cols="4" md-row-height="45px" md-row-height="fit" md-gutter="15px" class="receipt-value-list">
+              <md-grid-tile ng-repeat="totals in item.totals">
+                  <div class="value-box">
+                        ${{totals}}
+                  </div>
+              </md-grid-tile>
+            </md-grid-list>
+          </div>
+
+        </md-item-content>
+        <md-divider></md-divider>
+      </md-item>
+    </md-list>
+  </md-content>
+ </md-content>
