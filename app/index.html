@@ -23,12 +23,12 @@
 </head>
 
 <body ng-controller="MainCtrl as main" layout="column" layout-fill >
-    <md-toolbar layout="row" md-theme="{{header.toolbar.theme}}" md-theme-watch 
+    <md-toolbar layout="row" md-theme="{{main.routeSettings.theme}}" md-theme-watch 
       ng-controller="HeaderCtrl as header" class='top-toolbar'>
       <md-button  ng-href="#/home" class='zl-icon-btn' > 
         <span class='zli-home'> </span>
       </md-button> 
-      <h1>{{header.toolbar.title}} </h1> 
+      <h1>{{main.routeSettings.title}} </h1> 
       <md-button ng-click="main.toggleSidenav()" class='zl-icon-btn'> 
         <span class='zli-menu'> </span>
       </md-button>
@@ -48,9 +48,9 @@
           </md-list>
         </md-content>
       </md-sidenav>
-    <div ng-view class="animation"></div>
+    <div ng-view class="{{main.routeSettings.pageId}}"></div>
 
-    <md-toolbar layout="row" md-theme="{{header.toolbar.theme}}" md-theme-watch 
+    <md-toolbar layout="row" md-theme="{{main.routeSettings.theme}}" md-theme-watch 
       ng-controller="HeaderCtrl as header" class="bottom-toolbar">
       <div class='tb-item'> <span class='zli-capture'></span></div>
       <div class='tb-item'> <span class='zli-messages'> </div>

@@ -104,27 +104,30 @@ zlcApp.config(['$routeProvider', '$mdThemingProvider',
 }]);
 
 
-zlcApp.controller('MainCtrl', ['$scope', '$mdSidenav', 'RouteCSSClasses',
-  function($scope, $mdSidenav, RouteCSSClasses) {
+zlcApp.controller('MainCtrl', ['$rootScope', '$scope', '$mdSidenav', 'RouteCSSClasses',
+  function($rootScope, $scope, $mdSidenav, RouteCSSClasses) {
+    var holdThis = this;
     this.toggleSidenav = toggleSideNav;
-    // this.routeClass = RouteCSSClasses.getClass();
-
+    this.getRouteSettings = RouteCSSClasses.getClass;
+    $rootScope.$on("$routeChangeSuccess", function(event) {
+      holdThis.routeSettings = holdThis.getRouteSettings();
+    });
     function toggleSideNav() {
       $mdSidenav('sidenav').toggle();
-    }
+    };
 }]);
 
 
 zlcApp.controller('HeaderCtrl', ['$rootScope', '$route', 'RouteCSSClasses', 
   function($rootScope, $route, RouteCSSClasses){
-  this.toolbar = RouteCSSClasses.getClass();
-  this.getToolbar = RouteCSSClasses.getClass;
-  var holdThis = this;
+  // this.toolbar = RouteCSSClasses.getClass();
+  // this.getToolbar = RouteCSSClasses.getClass;
+  // var holdThis = this;
 
-  $rootScope.$on("$routeChangeSuccess", function(event) {
-    // console.log('holdThis', holdThis);
-    holdThis.toolbar = holdThis.getToolbar();
-  });
+  // $rootScope.$on("$routeChangeSuccess", function(event) {
+  //   // console.log('holdThis', holdThis);
+  //   holdThis.toolbar = holdThis.getToolbar();
+  // });
 }]);
 
 zlcApp.controller('SideMenuCtrl', ['$mdSidenav','$location', '$log',
